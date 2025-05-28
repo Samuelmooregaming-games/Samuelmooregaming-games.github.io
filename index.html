@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Portfolio Website!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="">
+    <nav class="navbar" id="navbar">
+        <!-- <button class="nav-button" onclick="window.location.href='index.html'">Home</button>
+        <button class="nav-button" onclick="window.location.href='about.html'">About</button>
+        <a class="nav-button" href="#landing">Landing</a>
+        <a class="nav-button" href="#projects">Projects</a>
+        <a class="nav-button" href="#skills">Skills</a> -->
+        <button class="nav-button" id="dark-mode-toggle" style="margin-left:auto" > Dark Mode</button> 
+
+        <button class="hamburger" id="hamburger-btn" aria-label="open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="mobile-menu" id="mobile-menu"> 
+        <button class="nav-button" onclick="window.location.href='index.html'">Home</button>
+        <button class="nav-button" onclick="window.location.href='about.html'">About</button>
+        <a class="nav-button" href="#landing">Landing</a>
+        <a class="nav-button" href="#projects">Projects</a>
+        <a class="nav-button" href="#skills">Skills</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="landing" class="section">
+            <h1>Landing Section</h1>
+            <p>Welcome to my homepage! Scroll down to see the projects Ive Worked on!</p>
+
+            <div class="carousel">
+                <button class="carousel-btn carousel-btn-left">&#8592;</button>
+                <div class="carousel-images">
+                    <img src="./images/red.png" class="carousel-image active" alt="Image 1"/>
+                    <img src="./images/green.png" class="carousel-image" alt="Image 2"/>
+                    <img src="./images/blue.png" class="carousel-image" alt="Image 3"/>
+                </div>
+                <button class="carousel-btn carousel-btn-right">&#8594;</button>
+            </div>
+
+        </section>
+
+        <section id="projects" class="section">
+            <h1>Projects</h1>
+            <p>Here are some of the cool things I've built (including this website).</p>
+            
+            <!--Modal Image-->
+            <!-- TODO: Change placeholder image with an actual image-->
+            <img
+                class="open-modal"
+                data-modal="modal-overlay-1"
+                src="./images/blue.png" 
+                alt="Fruit Catcher"
+                style="cursor: pointer; border-radius: 8px; box-shadow: 0 2px 8px rgba(44, 62, 80, 0.15); margin-top:16px;"
+            />
+
+            <img
+                class="open-modal"
+                data-modal="modal-overlay-2"
+                src="./images/red.png" 
+                alt="Temp Image"
+                style="cursor: pointer; border-radius: 8px; box-shadow: 0 2px 8px rgba(44, 62, 80, 0.15); margin-top:16px;"
+            />
+
+        </section>
+
+        <section id="skills" class="section">
+            <h1>Skills</h1>
+            <p>HTML, CSS, JavaScript, C#, C++, Lua, SDL, OpenGL</p>
+        </section>
+
+    </main>
+
+    <!-- Modals -->
+    <div id="modal-overlay-1" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <!--Close Button-->
+            <button class="close-modal" data-modal="modal-overlay-1">&times;</button>
+            <!--Headings/Title-->
+            <h1>Fruit Catcher</h1>
+            <!--Images/Video-->
+            <img src="./images/red.png" alt = "Project 1 Image" style="max-width: 100%; border-radius: 8px;" />
+            <!--text paragraphs-->
+            <p>Fruit Catcher A game where your a basket trying to collect apples.</p>
+        </div>
+    </div>
+
+    <div id="modal-overlay-2" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <!--Close Button-->
+            <button class="close-modal" data-modal="modal-overlay-2">&times;</button>
+            <!--Headings/Title-->
+            <h1>Project Title</h1>
+            <!--Images/Video-->
+            <img src="./images/green.png" alt = "Project 2 Image" style="max-width: 100%; border-radius: 8px;" />
+            <!--text paragraphs-->
+            <p>The sequel to Fruit Catcher that adds more fruits and a speed power up.</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
