@@ -161,11 +161,16 @@ body.dark-mode .nav-button {
 }
 
 body.dark-mode .nav-button:hover {
-    background-color: #666045;
+background-color: #666045;
 }
 
 body.dark-mode .modal-overlay {
+background-color: #666045;
+color:black;
+}
 
+body.dark-mode .open-modal {
+  background-color: #666045;  
 }
 
 body.dark-mode .carousel-btn {
