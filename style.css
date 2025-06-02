@@ -200,7 +200,7 @@ body.dark-mode .carousel-images {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: auto;
+    margin-left: auto;
     z-index: 101;
 }
 
@@ -220,7 +220,6 @@ body.dark-mode .carousel-images {
     position: absolute;
     top: 60px;
     right: 20px;
-    margin: auto;
     background: #179636;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(139, 139, 23, 0.76);
@@ -235,7 +234,7 @@ body.dark-mode .carousel-images {
 }
 
 .mobile-menu .nav-button {
-    margin: 0 12px 8px 4px;
+    margin: 0 12px 8px 12px;
     width: auto;
     display: block;
 }
