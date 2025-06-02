@@ -218,12 +218,12 @@ body.dark-mode .carousel-images {
     flex-direction: row;
     position: absolute;
     top: 60px;
-    right: 480px;
+    right: 80px;
     margin-right: auto;
     background: #179636;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(139, 139, 23, 0.76);
-    padding: 12px 0;
+    padding: 4px 0;
     z-index:200;
     min-width: 160px;
     transition: 0.3s;
