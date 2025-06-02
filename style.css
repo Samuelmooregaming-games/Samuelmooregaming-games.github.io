@@ -216,7 +216,7 @@ body.dark-mode .carousel-images {
 
 .mobile-menu {
     display: none;
-    flex-direction: column;
+    flex-direction: row;
     position: absolute;
     top: 60px;
     right: 20px;
@@ -242,3 +242,17 @@ body.dark-mode .carousel-images {
 .mobile-menu .nav-button:last-child {
     margin-bottom: 0;
 } 
+
+@media only screen and (max-width: 600px) {
+    .mobile-menu {grid-area: 1 / span 6;}
+}
+
+@media only screen and (min-width: 600px) {
+    .mobile-menu {grid-area: 1 / span 6;}
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu {grid-area: 1 / span 6;}
+}
+
+
