@@ -193,8 +193,9 @@ body.dark-mode .carousel-images {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 44px;
-    height: 48px;
+    height: 44px;
     background: #d2df1f;
     border: none;
     border-radius: 5px;
@@ -218,7 +219,7 @@ body.dark-mode .carousel-images {
     flex-direction: row;
     position: absolute;
     top: 60px;
-    right: 0px;
+    right: 20px;
     margin: auto;
     background: #179636;
     border-radius: 8px;
