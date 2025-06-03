@@ -245,15 +245,17 @@ body.dark-mode .carousel-images {
 
 @media only screen and (max-width: 600px) {
 .mobile-menu {grid-area: 1 / span 6;}
+.mobile-menu {flex-direction: column;}
 }
 
 @media only screen and (min-width: 600px) {
 .mobile-menu {grid-area: 1 / span 6;}
+.mobile-menu {flex-direction: column;}
 }
 
 @media only screen and (min-width: 768px) {
   .mobile-menu {grid-area: 1 / span 6;}
-
+  .mobile-menu {flex-direction: row;}
 }
 
 
