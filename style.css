@@ -234,7 +234,7 @@ body.dark-mode .carousel-images {
 }
 
 .mobile-menu .nav-button {
-    margin: 0 12px 8px 12px;
+    margin: 0 4px 4px 4px;
     width: auto;
     display: block;
 }
@@ -244,15 +244,16 @@ body.dark-mode .carousel-images {
 } 
 
 @media only screen and (max-width: 600px) {
-    .mobile-menu {grid-area: 1 / span 6;}
+.mobile-menu {grid-area: 1 / span 6;}
 }
 
 @media only screen and (min-width: 600px) {
-    .mobile-menu {grid-area: 1 / span 6;}
+.mobile-menu {grid-area: 1 / span 6;}
 }
 
 @media only screen and (min-width: 768px) {
   .mobile-menu {grid-area: 1 / span 6;}
+
 }
 
 
