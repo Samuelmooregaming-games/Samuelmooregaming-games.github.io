@@ -18,22 +18,20 @@ document.querySelectorAll('.open-modal').forEach(trigger => {
 });
 
 //Close the correct modal when a close button is clicked
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.close-modal').forEach(close => {
-        close.addEventListener('click', function() {
-            const modalId = this.getAttribute('data-modal');
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = 'none';
-                modal.classList.remove('active');
-                document.body.classList.remove('modal-open');
-                modal.querySelectorAll('video').forEach(v => {
-                    v.pause();
-                    v.currentTime = 0;
-                });
-            }
+document.addEventListener('click', function (e) {
+    const closeBtn = e.target.closest('.close-modal');
+    if (!closeBtn) return;
+    const modalId = closeBtn.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+        modal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+        modal.querySelectorAll('video').forEach(v => {
+            v.pause();
+            v.currentTime = 0;
         });
-    });
+    }
 });
 
 //TODO: Think about allowing the user to close the modal by clicking outside of it
