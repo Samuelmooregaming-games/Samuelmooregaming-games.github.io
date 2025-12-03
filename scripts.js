@@ -22,8 +22,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.close-modal').forEach(close => {
         close.addEventListener('click', function() {
             const modalId = this.getAttribute('data-modal');
-            const modal = document.getElementById(modalId); });
-        
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+                modal.classList.remove('active');
+                document.body.classList.remove('modal-open');
+                modal.querySelectorAll('video').forEach(v => {
+                    v.pause();
+                    v.currentTime = 0;
+                });
+            }
+        });
     });
 });
 
