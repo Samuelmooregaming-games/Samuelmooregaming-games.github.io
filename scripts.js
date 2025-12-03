@@ -18,19 +18,12 @@ document.querySelectorAll('.open-modal').forEach(trigger => {
 });
 
 //Close the correct modal when a close button is clicked
-document.querySelectorAll('.close-modal').forEach(close => {
-    close.addEventListener('click', function() {
-        const modalId = this.getAttribute('data-modal');
-        const modal = document.getElementById(modalId);
-
-        modal.style.display = 'none';
-        modal.classList.remove('active');
-        document.body.classList.remove('modal-open');
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.close-modal').forEach(close => {
+        close.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            const modal = document.getElementById(modalId); });
         
-        modal.querySelectorAll('video').forEach(v => {
-    v.pause();
-    v.currentTime = 0;
-        });
     });
 });
 
