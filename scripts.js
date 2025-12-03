@@ -12,6 +12,8 @@ document.querySelectorAll('.open-modal').forEach(trigger => {
         modal.style.display = 'flex';
         modal.classList.add('active');
         document.body.classList.add('modal-open');
+
+        
     });
 });
 
@@ -24,6 +26,11 @@ document.querySelectorAll('.close-modal').forEach(close => {
         modal.style.display = 'none';
         modal.classList.remove('active');
         document.body.classList.remove('modal-open');
+
+        modal.querySelectorAll('video').forEach(v => {
+    v.pause();
+    v.currentTime = 0;
+        });
     });
 });
 
@@ -92,5 +99,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     }
+
+    
 
 });
