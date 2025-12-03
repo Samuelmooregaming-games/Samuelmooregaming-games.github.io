@@ -29,7 +29,7 @@ document.querySelectorAll('.close-modal').forEach(close => {
 
         modal.querySelectorAll('video').forEach(v => {
     v.pause();
-    v.currentTime = 0;
+    v.currentTime = 1;
         });
     });
 });
