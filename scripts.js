@@ -26,8 +26,7 @@ document.querySelectorAll('.close-modal').forEach(close => {
         modal.style.display = 'none';
         modal.classList.remove('active');
         document.body.classList.remove('modal-open');
-        document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('videoModal');
+        
         modal.querySelectorAll('video').forEach(v => {
     v.pause();
     v.currentTime = 0;
