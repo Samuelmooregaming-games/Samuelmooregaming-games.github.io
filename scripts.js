@@ -19,11 +19,13 @@ document.querySelectorAll('.open-modal').forEach(trigger => {
 document.addEventListener('click', function (e) {
     const closeBtn = e.target.closest('.close-modal');
     if (!closeBtn) return;
+    e.preventDefault();
     const modalId = closeBtn.getAttribute('data-modal');
     const modal = document.getElementById(modalId);
     if (modal) {
-        modal.style.display = 'none';
-        modal.classList.remove('active');
+        modal.removeAttribute('open');
+        modal.classList.remove('active', 'show');
+        modal.style.setProperty('display', 'none', 'important');
         document.body.classList.remove('modal-open');
         modal.querySelectorAll('video').forEach(v => {
             v.pause();
